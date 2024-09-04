@@ -1,0 +1,11 @@
+[tasks.build-wasm]
+script = '''
+    cargo build --release
+'''
+
+[tasks.release]
+# https://github.com/WebAssembly/binaryen/releases
+dependencies = ["build-wasm"]
+script = '''
+    wasm-opt -Os --strip -o lldb-win.wasm target/wasm32-wasi/release/lldb-win.wasm
+'''

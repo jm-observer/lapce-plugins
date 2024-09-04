@@ -1,0 +1,18 @@
+name = "lldb-win"
+version = "0.0.1"
+author = "jmhuang"
+display-name = "lldb-win"
+description = "lldb for Lapce"
+wasm = "lldb-win.wasm"
+#icon = "rust-logo.png"
+repository = "https://github.com/jm-observer/lapce-plugins"
+
+[activation]
+language = ["rust"]
+workspace-contains = ["*/Cargo.toml"]
+
+
+
+[config."debuggerPath"]
+default = ""
+description = "Path to codelldb.exe executable. When empty, it points to the bundled binary."

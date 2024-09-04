@@ -1,0 +1,12 @@
+name = "lldb-win"
+version = "0.0.1"
+author = "jmhuang"
+display-name = "lldb-win"
+description = "lldb for Lapce"
+wasm = "lldb-win.wasm"
+
+[configuration]
+language_id = "rust"
+[configuration.options.diagnostics]
+enable = false
+enableExperimental = false
